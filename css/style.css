@@ -1,22 +1,31 @@
 :root {
-  --dart-blue: #0175C2;
-  --dart-blue-light: #4DA8DA;
-  --dark-bg: #121212;
-  --darker-bg: #1A1A1A; /* لون الخلفية الداكن */
-  --light-bg: #F5F7FA;
-  --lighter-bg: #FFFFFF;
-  --text-dark: #333333;
-  --text-light: #F5F5F5;
-  --hover-scrollbar: #025a9c;
-  --code-bg-dark: #1A1A1A; /* لون خلفية الأكواد في الوضع الداكن */
-  --code-bg-light: #ffffff; /* لون خلفية الأكواد في الوضع الفاتح */
+  --dart-blue: #0288D1; /* تعديل إلى الأزرق الداكن المستخدم في لوجو Dart */
+  --dart-blue-light: #03A9F4; /* تعديل إلى الأزرق الفاتح */
+  --dark-bg: #121212; /* خلفية داكنة مع لون أنيق */
+  --darker-bg: #181818; /* خلفية داكنة أغمق */
+  --light-bg: #FAFAFA; /* خلفية فاتحة محايدة */
+  --lighter-bg: #FFFFFF; /* خلفية بيضاء نظيفة */
+  --text-dark: #212121; /* نص داكن مع تباين جيد */
+  --text-light: #E0E0E0; /* نص فاتح مع تباين مناسب */
+  --hover-scrollbar: #0288D1; /* لون داكن عند التمرير يناسب الأزرق */
+  --webkit-scrollbar-track: rgba(2, 136, 209, 0.1); /* خلفية التمرير باللون الأزرق الفاتح */
+  --code-bg-dark: #0289d110; /* خلفية أكواد باللون الأزرق الداكن */
+  --code-bg-light: #E1F5FE; /* خلفية أكواد فاتحة بالأزرق الفاتح */
+  --light-mode-course-level: rgba(3, 169, 244, 0.05); /* أزرق فاتح مع شفافية */
+  --dark-mode-course-level: rgba(2, 136, 209, 0.05); /* أزرق داكن مع شفافية */
+  --box-shadow-course-level: 0 2px 8px rgba(3, 169, 244, 0.1); /* ظل أزرق فاتح */
+  --sidebar-item-hover: rgba(3, 169, 244, 0.08); /* أزرق فاتح شفاف عند التمرير */
+  --course-item-hover: rgba(2, 136, 209, 0.08);  /* أزرق داكن شفاف عند التمرير */
+  --projects-course-item-i : #6c5ce7;
+  --projects-course-item-hover :  rgba(89, 46, 125, 0.08);
+
+  
+
   
  
+}
 
-  ;}
-  
-
-  
+/* باقي الكود يبقى كما هو تماماً بدون أي تغييرات */
   
   
   
@@ -140,7 +149,7 @@ body.light-mode .sidebar {
 
 
 .sidebar-item:hover {
-  background-color: rgba(77, 168, 218, 0.1);
+  background-color: var(--sidebar-item-hover);
 }
 
 body.dark-mode .sidebar-item.active {
@@ -237,7 +246,7 @@ body.light-mode pre {
   }
 }
 pre, pre code {
-  font-weight: bold !important;
+  /* font-weight: bold !important; */
 direction: ltr;
   text-align: left;
   font-family: 'Courier New', monospace;
@@ -546,19 +555,23 @@ body.light-mode .sidebar {
 
 /* تنسيق مستويات الدورة */
 .course-level {
-  background-color: rgba(77, 168, 218, 0.05);
+  background-color: var(--dark-mode-course-level);
   border-radius: 8px;
   padding: 0.5rem;
   transition: all 0.3s ease;
+  min-width: fit-content; /* يتناسب مع المحتوى */
+  width: auto; /* عرض تلقائي */
+  max-width: 100%; /* لا يتجاوز عرض السايدبار */
 }
 
 body.light-mode .course-level {
-  background-color: rgba(1, 117, 194, 0.05);
+  background-color: var(--light-mode-course-level);
 }
 
 .course-level:hover {
-  box-shadow: 0 2px 8px rgba(77, 168, 218, 0.1);
+  box-shadow: var(--box-shadow-course-level);
 }
+
 
 /* ترويسة المستوى */
 .level-header {
@@ -587,8 +600,24 @@ body.light-mode .level-number {
 }
 
 .projects .level-number {
-  background-color: #6c5ce7;
+  background-color: var(--projects-course-item-i);
 }
+.projects .level-title {
+  color: var(--projects-course-item-i);
+
+
+}
+
+.projects .course-item.active {
+  background-color: var(--projects-course-item-i);
+  color: white !important;
+}
+
+
+.projects .course-level:hover {
+  box-shadow: var(--projects-course-item-i);
+}
+
 
 .level-title {
   margin: 0;
@@ -603,6 +632,8 @@ body.light-mode .level-title {
 
 /* عناصر الدورة */
 .level-items {
+  white-space: nowrap; /* يمنع النزول لسطر جديد */
+  overflow-x: auto; /* يضيف شريط تمرير أفقي إذا لزم الأمر */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -641,7 +672,7 @@ body.light-mode .course-item i {
 }
 
 .course-item:hover {
-  background-color: rgba(77, 168, 218, 0.1);
+  background-color: var(--course-item-hover);
 }
 
 .course-item.active {
@@ -659,11 +690,11 @@ body.light-mode .course-item.active {
 
 /* تأثيرات خاصة للمشاريع */
 .projects .course-item i {
-  color: #6c5ce7;
+  color:var(--projects-course-item-i);
 }
 
 .projects .course-item:hover {
-  background-color: rgba(108, 92, 231, 0.1);
+  background-color: var(--projects-course-item-hover);
 }
 
 /* تصميم متجاوب */
@@ -1014,13 +1045,17 @@ body.light-mode .alert-info {
 }
 .markdown-content hr {
   border: none;
-  border-top: 1px solid rgba(77, 168, 218, 0.3); /* لون خفيف يتماشى مع الوضع الداكن */
+  border-top: 1px solid var(--dart-blue-light); /* ✅ أخضر فاتح */
   margin: 2rem 0;
+  opacity: 0.4;
+  transition: all 0.3s ease;
 }
 
 body.light-mode .markdown-content hr {
-  border-top: 1px solid rgba(1, 117, 194, 0.3); /* لون مناسب للوضع الفاتح */
+  border-top: 1px solid var(--dart-blue); /* ✅ أخضر داكن في الفاتح */
+  opacity: 0.5;
 }
+
 
 blockquote {
   background-color: #FFF9C4; /* لون أصفر فاتح */
@@ -1262,6 +1297,9 @@ body {
 
 @media (min-width: 992px) {
   .sidebar {
+    width: auto; /* عرض تلقائي */
+    min-width: 280px; /* الحد الأدنى للعرض */
+    max-width: 350px; /* الحد الأقصى للعرض */
     transform: translateX(0);
     position: sticky;
   }
@@ -1353,7 +1391,7 @@ img, video, iframe {
   }
   
   body.dark-mode blockquote {
-    background-color: var(--quote-bg-dark);
+    background-color: var(--dart-blue-light);
     border-left-color: var(--quote-border-dark);
     color: #FFFFA0; /* لون نص أفتح في الوضع المظلم */
   }
@@ -1369,7 +1407,7 @@ img, video, iframe {
   }
   
   body.dark-mode blockquote::before {
-    color: rgba(255, 88, 88, 0.3); /* تعديل اللون للوضع المظلم */
+    color: rgb(255 255 255 / 30%); /* تعديل اللون للوضع المظلم */
   }
   
   blockquote footer {
@@ -1395,7 +1433,7 @@ body.light-mode blockquote p {
 }
 
 body.dark-mode blockquote p {
-  color: #FFFFC0; /* لون نص فاتح في الوضع المظلم */
+  color: #eee; /* لون نص فاتح في الوضع المظلم */
 }
 
 @media (max-width: 768px) {
@@ -1418,7 +1456,7 @@ body.dark-mode blockquote p {
 
 /* الخلفية العامة لشريط التمرير */
 ::-webkit-scrollbar-track {
-  background: rgba(77, 168, 218, 0.1);
+  background: var(--webkit-scrollbar-track);
   border-radius: 10px;
 }
 
@@ -1640,3 +1678,90 @@ body.light-mode pre {
   outline: none;
 }
 /* //////////////////////////////////////////// */
+/* تغيير لون جداول ماركداون فقط */
+.markdown-content th {
+  background-color: #2E7D32; /* أخضر داكن */
+  color: white;
+}
+
+body.light-mode .markdown-content th {
+  background-color: #4CAF50; /* أخضر فاتح */
+}
+
+.markdown-content td {
+  border: 1px solid rgba(76, 175, 80, 0.3); /* أخضر بدرجة شفافية */
+}
+
+.markdown-content tr:nth-child(even) {
+  background-color: rgba(76, 175, 80, 0.05); /* أخضر فاتح شفاف */
+}
+
+body.light-mode .markdown-content tr:nth-child(even) {
+  background-color: rgba(46, 125, 50, 0.05); /* أخضر داكن شفاف */
+}
+
+.markdown-content tr:hover {
+  background-color: rgba(76, 175, 80, 0.1); /* أخضر فاتح شفاف */
+}
+
+/* //////////////////////////////////////////// */
+.code-controls {
+  position: absolute;
+  top: 8px;
+  right: 8px; /* ✅ كان left: 8px */
+  display: flex;
+  gap: 6px;
+  z-index: 5;
+}
+
+
+.sql-btn {
+  background-color: var(--dart-blue-light);
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.sql-btn:hover {
+  background-color: var(--hover-scrollbar);
+}
+
+.sql-btn i {
+  pointer-events: none;
+}
+
+body.light-mode .sql-btn {
+  background-color: var(--dart-blue);
+}
+
+body.light-mode .sql-btn:hover {
+  background-color: var(--hover-scrollbar);
+}
+
+/* ✅ نتيجة التشغيل */
+.sql-result {
+  display: none; /* ❌ مخفي افتراضيًا */
+  padding: 1rem;
+  margin-top: 0.5rem;
+  background-color: var(--code-bg-dark);
+  color: var(--text-light);
+  border-radius: 8px;
+  border: 1px solid var(--dart-blue-light);
+}
+body.light-mode .sql-result {
+  background-color: var(--code-bg-light);
+  color: var(--text-dark);
+  border-color: var(--dart-blue);
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}

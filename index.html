@@ -28,7 +28,7 @@
 <body class="dark-mode">
  <header class="header">
   <div class="header-container">
-        <h1 class="logo">Dart<span>درويش</span></h1>
+    <h1 class="logo" id="homeLogo">SQL<span>درويش</span></h1>
     <button class="theme-toggle" id="themeToggle">
       <i class="fa fa-sun-o" aria-hidden="true"></i>
     </button>
@@ -38,263 +38,384 @@
   <div class="main-container">
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-container">
-        <!-- المستوى الأول: أساسيات دارت -->
-        <div class="course-level">
-          <div class="level-header">
-            <div class="level-number">1</div>
-            <h3 class="level-title">أساسيات دارت</h3>
-          </div>
-          <ul class="level-items">
-            <li class="course-item active" data-article="intro">
-              <i class="fa fa-play-circle"></i>
-              <span>مقدمة إلى دارت</span>
-            </li>
-            <li class="course-item" data-article="setup">
-              <i class="fa fa-cog"></i>
-              <span>إعداد البيئة</span>
-            </li>
-            <li class="course-item" data-article="syntax">
-              <i class="fa fa-code"></i>
-              <span>بناء الجملة</span>
-            </li>
-            <li class="course-item" data-article="variables">
-              <i class="fa fa-tag"></i>
-              <span>المتغيرات والثوابت</span>
-            </li>
-            <li class="course-item" data-article="data-types">
-              <i class="fa fa-list-alt"></i>
-              <span>أنواع البيانات</span>
-            </li>
-          </ul>
-        </div>
-    
-        <!-- المستوى الثاني: التحكم والتكرار -->
-        <div class="course-level">
-          <div class="level-header">
-            <div class="level-number">2</div>
-            <h3 class="level-title">الشروط و الحلقات التكرارية</h3>
-          </div>
-          <ul class="level-items">
-            <li class="course-item" data-article="conditions">
-              <i class="fa fa-random"></i>
-              <span>الجمل الشرطية</span>
-            </li>
-            <li class="course-item" data-article="loops">
-              <i class="fa fa-repeat"></i>
-              <span>الحلقات التكرارية</span>
-            </li>
-            <li class="course-item" data-article="functions">
-              <i class="fa fa-cubes"></i>
-              <span>الدوال</span>
-            </li>
-          </ul>
-        </div>
-    
-        <!-- المستوى الثالث: الدوال  -->
-        <div class="course-level">
-          <div class="level-header">
-            <div class="level-number">3</div>
-            <h3 class="level-title">الدوال</h3>
-          </div>
-          <ul class="level-items">
-            <li class="course-item" data-article="classes">
-              <i class="fa fa-object-group"></i>
-              <span>الكلاسات والكائنات</span>
-            </li>
-            <li class="course-item" data-article="inheritance">
-              <i class="fa fa-sitemap"></i>
-              <span>التوريث</span>
-            </li>
-            <li class="course-item" data-article="polymorphism">
-              <i class="fa fa-exchange"></i>
-              <span>تعدد الأشكال</span>
-            </li>
-          </ul>
-        </div>
-      <!-- المستوى الرابع : المجموعات -->
-      <div class="course-level">
-        <div class="level-header">
-          <div class="level-number">4</div>
-          <h3 class="level-title">المجموعات</h3>
-        </div>
-        <ul class="level-items">
-          <li class="course-item" data-article="classes">
-            <i class="fa fa-object-group"></i>
-            <span>الكلاسات والكائنات</span>
-          </li>
-          <li class="course-item" data-article="codes">
-            <i class="fa fa-sitemap"></i>
-            <span>التوريث</span>
-          </li>
-          <li class="course-item" data-article="polymorphism">
-            <i class="fa fa-exchange"></i>
-            <span>تعدد الأشكال</span>
-          </li>
-        </ul>
-      </div>
 
-   <!-- المستوى الخامس : التعامل مع ملفات  -->
-   <div class="course-level">
-    <div class="level-header">
-      <div class="level-number">5</div>
-      <h3 class="level-title">التعامل مع الملفات</h3>
-    </div>
-    <ul class="level-items">
-      <li class="course-item" data-article="classes">
-        <i class="fa fa-object-group"></i>
-        <span>الكلاسات والكائنات</span>
-      </li>
-      <li class="course-item" data-article="inheritance">
-        <i class="fa fa-sitemap"></i>
-        <span>التوريث</span>
-      </li>
-      <li class="course-item" data-article="polymorphism">
-        <i class="fa fa-exchange"></i>
-        <span>تعدد الأشكال</span>
-      </li>
-    </ul>
+        <div class="course-level">
+           
+          <ul class="level-items">
+            <li class="course-item active" data-article="home">
+              <i class="fa fa-home"></i>
+              <span>الصفحة الرئيسية</span>
+            </li>
+          
+        </div>
+    <!-- المستوى الأول: مقدمة وأساسيات دارت -->
+<div class="course-level">
+  <div class="level-header">
+    <div class="level-number">1</div>
+    <h3 class="level-title">مقدمة وأساسيات دارت</h3>
   </div>
+  <ul class="level-items">
+    <li class="course-item" data-article="intro">
+      <i class="fa fa-play-circle"></i>
+      <span>مقدمة إلى لغة دارت</span>
+    </li>
+    <li class="course-item" data-article="install">
+      <i class="fa fa-download"></i>
+      <span>تثبيت دارت</span>
+    </li>
+    <li class="course-item" data-article="first-program">
+      <i class="fa fa-code"></i>
+      <span>برنامج دارت الأول</span>
+    </li>
+    <li class="course-item" data-article="variables">
+      <i class="fa fa-tag"></i>
+      <span>المتغيرات</span>
+    </li>
+    <li class="course-item" data-article="data-types">
+      <i class="fa fa-list-ol"></i>
+      <span>أنواع البيانات</span>
+    </li>
+    <li class="course-item" data-article="comments">
+      <i class="fa fa-comment"></i>
+      <span>التعليقات</span>
+    </li>
+    <li class="course-item" data-article="operators">
+      <i class="fa fa-calculator"></i>
+      <span>العوامل</span>
+    </li>
+    <li class="course-item" data-article="input">
+      <i class="fa fa-keyboard"></i>
+      <span>إدخال البيانات</span>
+    </li>
+    <li class="course-item" data-article="strings">
+      <i class="fa fa-font"></i>
+      <span>النصوص</span>
+    </li>
+  </ul>
+</div>
 
-   <!-- المستوى السادس : البرمجة الكائنية -->
-   <div class="course-level">
-    <div class="level-header">
-      <div class="level-number">6</div>
-      <h3 class="level-title">البرمجة الكائنية</h3>
-    </div>
-    <ul class="level-items">
-      <li class="course-item" data-article="classes">
-        <i class="fa fa-object-group"></i>
-        <span>الكلاسات والكائنات</span>
-      </li>
-      <li class="course-item" data-article="inheritance">
-        <i class="fa fa-sitemap"></i>
-        <span>التوريث</span>
-      </li>
-      <li class="course-item" data-article="polymorphism">
-        <i class="fa fa-exchange"></i>
-        <span>تعدد الأشكال</span>
-      </li>
-    </ul>
+<!-- المستوى الثاني: التحكم والشرطيات -->
+<div class="course-level">
+  <div class="level-header">
+    <div class="level-number">2</div>
+    <h3 class="level-title">التحكم والشرطيات</h3>
   </div>
+  <ul class="level-items">
+    <li class="course-item" data-article="conditions">
+      <i class="fa fa-question-circle"></i>
+      <span>الجمل الشرطية</span>
+    </li>
+    <li class="course-item" data-article="assert">
+      <i class="fa fa-exclamation-circle"></i>
+      <span>جملة التأكيد (Assert)</span>
+    </li>
+    <li class="course-item" data-article="switch">
+      <i class="fa fa-random"></i>
+      <span>جملة التبديل (Switch)</span>
+    </li>
+    <li class="course-item" data-article="ternary">
+      <i class="fa fa-code"></i>
+      <span>العامل الثلاثي</span>
+    </li>
+  </ul>
+</div>
 
-<!-- المستوى السابع :   Null Safety  -->
+<!-- المستوى الثالث: الحلقات والتكرار -->
+<div class="course-level">
+  <div class="level-header">
+    <div class="level-number">3</div>
+    <h3 class="level-title">الحلقات التكرارية</h3>
+  </div>
+  <ul class="level-items">
+    <li class="course-item" data-article="loops">
+      <i class="fa fa-redo"></i>
+      <span>مقدمة في الحلقات</span>
+    </li>
+    <li class="course-item" data-article="for">
+      <i class="fa fa-sync"></i>
+      <span>حلقة For</span>
+    </li>
+    <li class="course-item" data-article="foreach">
+      <i class="fa fa-retweet"></i>
+      <span>حلقة ForEach</span>
+    </li>
+    <li class="course-item" data-article="while">
+      <i class="fa fa-undo"></i>
+      <span>حلقة While</span>
+    </li>
+    <li class="course-item" data-article="dowhile">
+      <i class="fa fa-repeat"></i>
+      <span>حلقة Do-While</span>
+    </li>
+    <li class="course-item" data-article="break-continue">
+      <i class="fa fa-stop-circle"></i>
+      <span>Break و Continue</span>
+    </li>
+    <li class="course-item" data-article="exceptions">
+      <i class="fa fa-exclamation-triangle"></i>
+      <span>معالجة الأخطاء</span>
+    </li>
+  </ul>
+</div>
+
+<!-- المستوى الرابع: الدوال -->
+<div class="course-level">
+  <div class="level-header">
+    <div class="level-number">4</div>
+    <h3 class="level-title">الدوال</h3>
+  </div>
+  <ul class="level-items">
+    <li class="course-item" data-article="functions">
+      <i class="fa fa-cogs"></i>
+      <span>مقدمة في الدوال</span>
+    </li>
+    <li class="course-item" data-article="function-types">
+      <i class="fa fa-project-diagram"></i>
+      <span>أنواع الدوال</span>
+    </li>
+    <li class="course-item" data-article="parameters">
+      <i class="fa fa-sliders-h"></i>
+      <span>معاملات الدوال</span>
+    </li>
+    <li class="course-item" data-article="anonymous">
+      <i class="fa fa-user-secret"></i>
+      <span>الدوال المجهولة</span>
+    </li>
+    <li class="course-item" data-article="arrow">
+      <i class="fa fa-arrow-right"></i>
+      <span>الدوال السهمية</span>
+    </li>
+    <li class="course-item" data-article="scope">
+      <i class="fa fa-bullseye"></i>
+      <span>نطاق المتغيرات</span>
+    </li>
+    <li class="course-item" data-article="math">
+      <i class="fa fa-square-root-alt"></i>
+      <span>الدوال الرياضية</span>
+    </li>
+  </ul>
+</div>
+
+<!-- المستوى الخامس: المجموعات -->
+<div class="course-level">
+  <div class="level-header">
+    <div class="level-number">5</div>
+    <h3 class="level-title">المجموعات</h3>
+  </div>
+  <ul class="level-items">
+    <li class="course-item" data-article="lists">
+      <i class="fa fa-list"></i>
+      <span>القوائم (List)</span>
+    </li>
+    <li class="course-item" data-article="sets">
+      <i class="fa fa-object-group"></i>
+      <span>المجموعات (Set)</span>
+    </li>
+    <li class="course-item" data-article="maps">
+      <i class="fa fa-map"></i>
+      <span>الخرائط (Map)</span>
+    </li>
+    <li class="course-item" data-article="where">
+      <i class="fa fa-filter"></i>
+      <span>تصفية البيانات (Where)</span>
+    </li>
+  </ul>
+</div>
+
+<!-- المستوى السادس: التعامل مع الملفات -->
+<div class="course-level">
+  <div class="level-header">
+    <div class="level-number">6</div>
+    <h3 class="level-title">التعامل مع الملفات</h3>
+  </div>
+  <ul class="level-items">
+    <li class="course-item" data-article="read-file">
+      <i class="fa fa-file-alt"></i>
+      <span>قراءة الملفات</span>
+    </li>
+    <li class="course-item" data-article="write-file">
+      <i class="fa fa-file-upload"></i>
+      <span>كتابة الملفات</span>
+    </li>
+    <li class="course-item" data-article="delete-file">
+      <i class="fa fa-trash"></i>
+      <span>حذف الملفات</span>
+    </li>
+  </ul>
+</div>
+
+<!-- المستوى السابع: البرمجة كائنية التوجه -->
 <div class="course-level">
   <div class="level-header">
     <div class="level-number">7</div>
-    <h3 class="level-title">Null Safety</h3>
+    <h3 class="level-title">البرمجة كائنية التوجه</h3>
   </div>
   <ul class="level-items">
-    <li class="course-item" data-article="classes">
-      <i class="fa fa-object-group"></i>
-      <span>الكلاسات والكائنات</span>
+    <li class="course-item" data-article="oop">
+      <i class="fa fa-object-ungroup"></i>
+      <span>مقدمة في الـ OOP</span>
+    </li>
+    <li class="course-item" data-article="class">
+      <i class="fa fa-cube"></i>
+      <span>الصفوف (Class)</span>
+    </li>
+    <li class="course-item" data-article="object">
+      <i class="fa fa-cubes"></i>
+      <span>الكائنات (Object)</span>
+    </li>
+    <li class="course-item" data-article="constructors">
+      <i class="fa fa-hammer"></i>
+      <span>المنشئات (Constructors)</span>
+    </li>
+    <li class="course-item" data-article="encapsulation">
+      <i class="fa fa-lock"></i>
+      <span>التغليف (Encapsulation)</span>
     </li>
     <li class="course-item" data-article="inheritance">
       <i class="fa fa-sitemap"></i>
-      <span>التوريث</span>
+      <span>الوراثة (Inheritance)</span>
     </li>
     <li class="course-item" data-article="polymorphism">
-      <i class="fa fa-exchange"></i>
-      <span>تعدد الأشكال</span>
+      <i class="fa fa-random"></i>
+      <span>تعدد الأشكال (Polymorphism)</span>
+    </li>
+    <li class="course-item" data-article="abstract">
+      <i class="fa fa-shapes"></i>
+      <span>الصفوف المجردة</span>
+    </li>
+    <li class="course-item" data-article="interfaces">
+      <i class="fa fa-puzzle-piece"></i>
+      <span>الواجهات</span>
+    </li>
+    <li class="course-item" data-article="mixins">
+      <i class="fa fa-paste"></i>
+      <span>الميكسينات</span>
+    </li>
+    <li class="course-item" data-article="generics">
+      <i class="fa fa-braille"></i>
+      <span>الأنواع العامة</span>
     </li>
   </ul>
 </div>
 
-
-
-<!-- المستوى الثامن :  البرمجة غير المتزامنة  -->
+<!-- المستوى الثامن: الأمان والعمليات غير المتزامنة -->
 <div class="course-level">
   <div class="level-header">
     <div class="level-number">8</div>
-    <h3 class="level-title">البرمجة غير المتزامنة</h3>
+    <h3 class="level-title">الأمان والعمليات غير المتزامنة</h3>
   </div>
   <ul class="level-items">
-    <li class="course-item" data-article="classes">
-      <i class="fa fa-object-group"></i>
-      <span>الكلاسات والكائنات</span>
+    <li class="course-item" data-article="null-safety">
+      <i class="fa fa-shield-alt"></i>
+      <span>Null Safety</span>
     </li>
-    <li class="course-item" data-article="inheritance">
-      <i class="fa fa-sitemap"></i>
-      <span>التوريث</span>
+    <li class="course-item" data-article="async">
+      <i class="fa fa-bolt"></i>
+      <span>البرمجة غير المتزامنة</span>
     </li>
-    <li class="course-item" data-article="polymorphism">
-      <i class="fa fa-exchange"></i>
-      <span>تعدد الأشكال</span>
+    <li class="course-item" data-article="future">
+      <i class="fa fa-clock"></i>
+      <span>الـ Future</span>
+    </li>
+    <li class="course-item" data-article="async-await">
+      <i class="fa fa-hourglass-half"></i>
+      <span>Async و Await</span>
+    </li>
+    <li class="course-item" data-article="streams">
+      <i class="fa fa-stream"></i>
+      <span>الـ Streams</span>
     </li>
   </ul>
 </div>
 
-
-<!-- المستوى التاسع :   معلومات مفيدة  -->
+<!-- المستوى التاسع: معلومات إضافية -->
 <div class="course-level">
   <div class="level-header">
     <div class="level-number">9</div>
-    <h3 class="level-title">معلومات مفيدة</h3>
+    <h3 class="level-title">معلومات إضافية</h3>
   </div>
   <ul class="level-items">
-    <li class="course-item" data-article="classes">
-      <i class="fa fa-object-group"></i>
-      <span>الكلاسات والكائنات</span>
+    <li class="course-item" data-article="final-const">
+      <i class="fa fa-lock"></i>
+      <span>Final مقابل Const</span>
     </li>
-    <li class="course-item" data-article="inheritance">
-      <i class="fa fa-sitemap"></i>
-      <span>التوريث</span>
+    <li class="course-item" data-article="datetime">
+      <i class="fa fa-calendar-alt"></i>
+      <span>التعامل مع التاريخ والوقت</span>
     </li>
-    <li class="course-item" data-article="polymorphism">
-      <i class="fa fa-exchange"></i>
-      <span>تعدد الأشكال</span>
+    <li class="course-item" data-article="extensions">
+      <i class="fa fa-expand"></i>
+      <span>الإضافات (Extensions)</span>
+    </li>
+    <li class="course-item" data-article="backend">
+      <i class="fa fa-server"></i>
+      <span>دارت في Backend</span>
+    </li>
+    <li class="course-item" data-article="testing">
+      <i class="fa fa-vial"></i>
+      <span>اختبار الوحدة</span>
     </li>
   </ul>
 </div>
 
-
-<!-- المستوى العاشر :   كيف تستخدم دارت؟  -->
+<!-- المستوى العاشر: كيف تفعل كذا في دارت -->
 <div class="course-level">
   <div class="level-header">
     <div class="level-number">10</div>
-    <h3 class="level-title">كيف تستخدم</h3>
+    <h3 class="level-title">كيف تفعل في دارت</h3>
   </div>
   <ul class="level-items">
-    <li class="course-item" data-article="classes">
-      <i class="fa fa-object-group"></i>
-      <span>الكلاسات والكائنات</span>
+    <li class="course-item" data-article="string-to-int">
+      <i class="fa fa-exchange-alt"></i>
+      <span>تحويل النص إلى رقم</span>
     </li>
-    <li class="course-item" data-article="inheritance">
-      <i class="fa fa-sitemap"></i>
-      <span>التوريث</span>
+    <li class="course-item" data-article="random">
+      <i class="fa fa-random"></i>
+      <span>إنشاء أرقام عشوائية</span>
     </li>
-    <li class="course-item" data-article="polymorphism">
-      <i class="fa fa-exchange"></i>
-      <span>تعدد الأشكال</span>
+    <li class="course-item" data-article="capitalize">
+      <i class="fa fa-text-height"></i>
+      <span>حرف كبير في بداية النص</span>
+    </li>
+    <li class="course-item" data-article="http">
+      <i class="fa fa-globe"></i>
+      <span>طلبات HTTP</span>
+    </li>
+    <li class="course-item" data-article="reverse-list">
+      <i class="fa fa-retweet"></i>
+      <span>عكس القوائم</span>
+    </li>
+    <li class="course-item" data-article="packages">
+      <i class="fa fa-box-open"></i>
+      <span>استخدام الحزم الخارجية</span>
     </li>
   </ul>
 </div>
 
-        <!-- المستوى الاحد عشر: تطبيقات متقدمة -->
-        <div class="course-level">
-          <div class="level-header">
-            <div class="level-number"><i class="fa-solid fa-code"></i></div>
-            
-
-            <h3 class="level-title">تطبيقات متقدمة</h3>
-          </div>
-          <ul class="level-items">
-            <li class="course-item" data-article="async">
-              <i class="fa fa-bolt"></i>
-              <span>البرمجة غير المتزامنة</span>
-            </li>
-            <li class="course-item" data-article="collections">
-              <i class="fa fa-database"></i>
-              <span>المجموعات</span>
-            </li>
-            <li class="course-item" data-article="files">
-              <i class="fa fa-file-text"></i>
-              <span>معالجة الملفات</span>
-            </li>
-          </ul>
-        </div>
+<!-- المستوى الحادي عشر: الاختبارات -->
+<div class="course-level">
+  <div class="level-header">
+    <div class="level-number">11</div>
+    <h3 class="level-title">اختبار معلوماتك</h3>
+  </div>
+  <ul class="level-items">
+    <li class="course-item" data-article="quiz">
+      <i class="fa fa-question-circle"></i>
+      <span>اختبار شامل</span>
+    </li>
+    <li class="course-item" data-article="practice">
+      <i class="fa fa-tasks"></i>
+      <span>تمارين تطبيقية</span>
+    </li>
+    <li class="course-item" data-article="interview">
+      <i class="fa fa-comments"></i>
+      <span>أسئلة مقابلات</span>
+    </li>
+  </ul>
+</div>
     
         <!-- قسم المشاريع -->
-        <div class="course-level projects">
+        <!-- <div class="course-level projects">
           <div class="level-header projects">
             <div class="level-number projects"><i class="fa fa-flask"></i></div>
             <h3 class="level-title">المشاريع العملية</h3>
@@ -310,10 +431,10 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div> -->
       
 
-      <div class="developer-accordion">
+      <!-- <div class="developer-accordion">
         <div class="accordion-header">
           <img src="images\my-avatar.png" alt="Developer">
           <span>معلومات المطور</span>
@@ -343,7 +464,7 @@
           </div>
         </div>
       </div>
-
+ -->
 
 
 
