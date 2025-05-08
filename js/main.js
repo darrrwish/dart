@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function handleSidebarVisibility() {
     if (window.innerWidth <= 768) {
       sidebar.classList.remove('visible');
-      sidebarToggle.innerHTML = '<i class="fa-solid fa-database"></i>';
+      sidebarToggle.innerHTML = '<i class="fa-solid fa-list-ol"></i>';
       sidebarToggle.style.display = 'block';
     } else {
       sidebar.classList.add('visible');
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     item.addEventListener('click', function () {
       if (window.innerWidth <= 768) {
         sidebar.classList.remove('visible');
-        sidebarToggle.innerHTML = '<i class="fa-solid fa-database"></i>';
+        sidebarToggle.innerHTML = '<i class="fa-solid fa-list-ol"></i>';
       }
 
       document.querySelectorAll('.course-item').forEach(i => i.classList.remove('active'));
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
     sidebar.classList.toggle('visible');
     sidebarToggle.innerHTML = sidebar.classList.contains('visible')
       ? '<i class="fa-solid fa-xmark"></i>'
-      : '<i class="fa-solid fa-database"></i>';
+      : '<i class="fa-solid fa-list-ol"></i>';
   });
 
   async function loadArticle(articleName) {
